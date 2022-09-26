@@ -1,0 +1,24 @@
+////////////////////////////////////////////////////////////////////////////////////
+// This is your server list. It can hold up to 5 servers.                         //
+//                                                                                //
+// Format is: Server Number;Server Name;IP:Query Port;Password                    //
+// Example: 1;Savage Depravity;192.169.83.92:17015;password                       //
+//                                                                                //
+// Server Number - for internal use, you can give it any numer from 1 to 5        //
+// Server Name   - this is more for you so that you know at first glance what     //
+//                 server is behind each number, you can name it however you like //
+// IP:Query Port - IP is pretty straightforward, but Query Port is very important //
+//                 here and you might need to ask the admin for it as usually the //
+//                 server provides only Game server port and that won't work      //
+// Password      - pwd obviously :))                                              //
+////////////////////////////////////////////////////////////////////////////////////
+
+1;
+
+///////////////////////////////////////////////////////////////////////
+// Here you set up the path to required directories.                 //
+// ConanPath is for where the game executable is.                    //
+// Example: ConanPath=h:\SteamLibrary\steamapps\common\Conan Exiles\ //
+///////////////////////////////////////////////////////////////////////
+
+ConanPath=
