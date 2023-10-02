@@ -26,6 +26,13 @@ for /f "tokens=2 delims=^=" %%i in ('findstr /rbc:"ConanPath=*" config.txt') do 
 :: and we also need a path to the mod folder
 set "ConanMods=%ConanPath%ConanSandbox\Mods\"
 
+:: aand we also need a path to steam executable
+for /f "tokens=2 delims=^=" %%i in ('findstr /rbc:"SteamPath=*" config.txt') do set "SteamPath=%%i"
+
+:: we check if the paths are correct
+if not exist "%ConanPath%\ConanSandbox.exe" goto :nopath_conan
+if not exist "%SteamPath%\steam.exe" goto :nopath_steam
+
 :: we make a backup first, just in case..
 md "%ConanMods%_backup"
 copy "%ConanMods%modlist.txt" "%ConanMods%_backup\modlist.txt"
@@ -34,7 +41,29 @@ copy "%ConanMods%modlist.txt" "%ConanMods%_backup\modlist.txt"
 copy "server%userchoice%\modlist.txt" "%ConanMods%modlist.txt"
 
 :: finaly we run the game
-start "" "steam://connect/%sip%/%spwd%"
+"%steampath%steam.exe" -applaunch 440900 +connect %sip% +password %spwd%
 
-::pause
+goto :end
+
+:nopath_conan
+
+echo:
+echo *----------------------------------------------------*
+echo *   Error:    ConanPath isn't filled up correctly.   *
+echo *----------------------------------------------------*
+echo:
+pause
+goto :end
+
+:nopath_steam
+
+echo:
+echo *----------------------------------------------------*
+echo *   Error:    ConanPath isn't filled up correctly.   *
+echo *----------------------------------------------------*
+echo:
+pause
+goto :end
+
+:end
 exit

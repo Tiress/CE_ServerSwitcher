@@ -18,7 +18,11 @@
 ///////////////////////////////////////////////////////////////////////
 // Here you set up the path to required directories.                 //
 // ConanPath is for where the game executable is.                    //
-// Example: ConanPath=h:\SteamLibrary\steamapps\common\Conan Exiles\ //
+// SteamPath is where your Steam.exe is.                             //
+// Example:                                                          //
+//          ConanPath=h:\SteamLibrary\steamapps\common\Conan Exiles\ //
+//          SteamPath=c:\Program Files (x86)\Steam\                  //
 ///////////////////////////////////////////////////////////////////////
 
 ConanPath=
+SteamPath=
