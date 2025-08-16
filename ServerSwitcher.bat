@@ -59,7 +59,7 @@ goto :end
 
 echo:
 echo *----------------------------------------------------*
-echo *   Error:    ConanPath isn't filled up correctly.   *
+echo *   Error:    SteamPath isn't filled up correctly.   *
 echo *----------------------------------------------------*
 echo:
 pause
